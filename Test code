@@ -1,0 +1,300 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{vietnam}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{authblk}
+\usepackage{subcaption}
+\usepackage{wrapfig}
+\usepackage[export]{adjustbox}
+\usepackage{array}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[most]{tcolorbox}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{empheq}
+\usepackage{witharrows}
+\usepackage{tabularx}
+\usepackage{tipa}
+\usepackage{fancyhdr}
+\usepackage{lipsum}
+\usepackage[margin=1.5cm]{geometry}
+\usepackage{txfonts}
+\usepackage{wrapfig}
+\usepackage[skip=10pt plus1pt, indent=20pt]{parskip}
+\definecolor{main}{HTML}{5989cf}    % setting main color to be used
+\definecolor{sub}{HTML}{cde4ff}  
+\usepackage[contents={LTT's Mathaholics}, color = {main}, angle = {55}, scale = {7}]{background}
+\usepackage{hyperref}
+\setlength{\abovedisplayskip}{0pt}
+\setlength{\belowdisplayskip}{0pt}
+\setlength{\abovedisplayshortskip}{0pt}
+\setlength{\belowdisplayshortskip}{0pt}
+
+\renewcommand{\baselinestretch}{1.2}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\textit{Lời giải Olympic Gặp gỡ Toán học năm 2024}}
+\lhead{\textit{The Mathaholics}}
+
+\definecolor{main}{HTML}{5989cf}    % setting main color to be used
+\definecolor{sub}{HTML}{cde4ff}     % setting sub color to be used
+
+
+\newtcolorbox{boxD}{
+    colback = sub, 
+    colframe = main, 
+    boxrule = 0pt, 
+    toprule = 3pt, % top rule weight
+    bottomrule = 3pt % bottom rule weight
+}
+
+\newtcolorbox{boxH}{
+    colback = white, 
+    colframe = main, rounded corners, arc = 6pt
+    boxrule = 0pt, 
+    leftrule = 6pt % left rule weight
+}
+
+\newtcolorbox{boxI}{
+    colback = white, 
+    colframe = main, 
+    boxrule = 0pt, 
+    toprule = 6pt % top rule weight
+}
+
+\newtcolorbox{boxA}{
+    boxrule = 1.5pt,
+    colframe = black % frame color
+}
+
+\title{\textbf{\color{blue}LỜI GIẢI OLYMPIC GẶP GỠ TOÁN HỌC}}
+\author{The Mathaholics - LTT's Math Community}
+\date{14/07/2024}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+%%%%BÀI 1%%%%
+\begin{boxD}
+\textbf{\color{blue}Câu 1:}\\
+Cho $a$, $b$, $c$ là các số thực thỏa mãn điều kiện $a+b+c=2$ và $a^2+ b^2+ c^2= 2$. Tìm giá trị lớn nhất và giá trị nhỏ nhất của biểu thức:
+\begin{center}
+    $P = (a^2+2bc)(b^2+2ca)(c^2+2ab)$.
+\end{center}
+\end{boxD}
+Đặt $\begin{cases}p=a+b+c=2\\q=ab+bc+ca=\dfrac{(a+b+c)^{2}-(a^{2}+b^{2}+c^{2})}{2}=\dfrac{4-2}{2}=1\\r=abc\end{cases}$\
+
+Bằng biến đổi đại số ta thu được:
+\begin{align*}
+    P & = \left(a^{2}+2bc\right)\left(b^{2}+2ca\right)\left(c^{2}+2ab\right) = 27r^2 - 4r +2.
+\end{align*}
+
+Mặt khác, xét bất đẳng thức $(a-b)^{2}(b-c)^{2}(c-a)^{2}\geq0$ (với $a$, $b$, $c$ là các số thực).\
+
+Khai triển rồi viết dưới dạng một bất đẳng thức theo 3 biến $p$, $q$, $r$ như sau:
+\begin{center}
+    $-27r^{2}+2p(9p-2p^{2})r+p^{2}q^{2}-4q^{3}\geq0$
+\end{center}
+
+Đây là tam thức bậc hai theo $r$ nên ta thu được:
+\begin{align*}
+    \dfrac{p(9q-2p^{2})-2(p^{2}-3q)\sqrt{p^{2}-3q}}{27} \leq r & \leq \dfrac{p(9q-2p^{2})+2(p^{2}-3q)\sqrt{p^{2}-3q}}{27}\\
+    \Leftrightarrow\dfrac{\left(p-2\sqrt{p^{2}-3q}\right)\left(p+\sqrt{p^{2}-3q}\right)^{2}}{27}\leq r & \leq\dfrac{\left(p+2\sqrt{p^{2}-3q}\right)\left(p-\sqrt{p^{2}-3q}\right)^{2}}{27}.
+\end{align*}
+
+Kết hợp với $p=2,q=1$ ta thu được $0\le r\le \dfrac{4}{27}$.
+
+Lại có $P = 27r^2 - 4r +2 = r\left(27r-4\right)+2 \leq 2$\
+
+Dấu đẳng thức xảy ra khi và chỉ khi $r\in \left\{0,\dfrac{4}{27}\right\}.$
+
+Ta lại có $P=27\left(r^{2}-2r\cdot\dfrac{2}{27}+\dfrac{4}{729}\right)+\dfrac{50}{27}=27\left(r-\dfrac{2}{27}\right)^{2}+\dfrac{50}{27}\geq\dfrac{50}{27}$.
+
+Dấu đẳng thức xảy ra khi và chỉ khi $r = \dfrac{2}{27}$\
+
+Vậy $Max P = 2$, đẳng thức xảy ra khi $(a,b,c)=(1,1,0)$ hoặc $(a,b,c)=\left(\dfrac{4}{3},\dfrac{1}{3},\dfrac{1}{3}\right)$ và các hoán vị.\
+
+\phantom{Vậy }$Min P = \dfrac{50}{27}$, đẳng thức xảy ra khi $\left(a,b,c\right)=\left(2+\dfrac{1}{\sqrt{3}},2-\dfrac{1}{\sqrt{3}},\dfrac{2}{3}\right)$ và các hoán vị.
+\newpage
+%%%% BÀI 2 %%%%
+\begin{boxD}
+\textbf{\color{blue}Câu 2:}\\
+Cho $a$, $b$ là các số thực dương, xét dãy số $(a_{n})$ thỏa mãn $a_1 = ab$ và\\
+\begin{center}
+    $a_n=a\left(b+\dfrac{a_1+a_2+\cdots+a_{n-1}}n\right)$ với $n > 1$.\\
+\end{center}
+
+\begin{enumerate}
+    \item[a)] Chứng minh rằng nếu $a=1$ thì $\lim\limits_{n\to+\infty}a_{n}=+\infty$.
+    \item[b)] Chứng minh rằng nếu $a<1$ thì dãy số $(a_{n})$ tồn tại giới hạn hữu hạn và hãy tìm giới hạn đó.
+\end{enumerate}
+\end{boxD}
+\begin{enumerate}
+    \item [a)] Với $a=1$, dãy $(a_{n})$ xác định bởi:
+    $\begin{cases}a_{1}=b>0\\a_{n}=b+\dfrac{a_{1}+a_{2}+\cdots+a_{n-1}}{n}\end{cases} ,\forall n > 1(1)$\
+
+    Dễ thấy $a_{n}>0,\forall n \in \mathbb{N}^{*}$.\
+
+    Từ $(1)$ ta suy ra:
+    \begin{align*}
+        & a_{n+1}=b+\dfrac{a_{1}+a_{n}+\cdots+a_{n-1}+a_{n}}{n+1}\\
+        \Leftrightarrow\qquad & a_{n+1}=b+\dfrac{n\left(b+\dfrac{a_{1}+a_{2}+a_{n-1}}{n}+\dfrac{a_{n}}{n}-b\right)}{n+1} \\
+        \Leftrightarrow\qquad & a_{n+1}=b+\dfrac{n\left(a_{n}+\dfrac{a_{n}}{n}-b\right)}{n+1}\\
+        \Leftrightarrow\qquad & a_{n+1}=\dfrac{b}{n+1}+a_{n}, \forall n \in \mathbb{N}^{*}\\
+    \end{align*}
+    Khi đó $a_{n+1}-a_{n}=\dfrac{b}{n+1}>0,\forall n\in \mathbb{N}^{*}$.\
+
+    Suy ra dãy $(a_{n})$ tăng ngặt.\
+
+    Ta có:
+    \begin{align*}
+        a_{n+1} & =\dfrac{b}{n+1}+a_{n}\\
+        & =\dfrac{b}{n+1}+\dfrac{b}{n}+a_{n-1} \\
+        & =\dfrac{b}{n+1}+\dfrac{b}{n}+\dfrac{b}{n-1} + a_{n-2}\\
+        & =\cdots\\
+        & =b\left(1+\dfrac{1}{2}+\cdots+\dfrac{1}{n+1}\right)+a_{1}\\
+        & =b\left(2+\dfrac{1}{2}+\cdots+\dfrac{1}{n+1}\right).
+    \end{align*}
+    Do đó, ta thu được
+    \[a_{n}>b.\sum_{i=1}^{n}\dfrac{1}{i}, \forall n \in \mathbb{N}^{*}\]
+    Mà $\lim\limits_{n\to\infty}\left(b\sum\limits_{i=1}^{n}\dfrac{1}{i}\right)=+\infty$ nên $\lim\limits_{n\to\infty}{a_n}=+\infty$.
+    \item[b)]Ta đi chứng minh bổ đề sau:
+    \begin{boxH}
+        \textbf{\color{blue}Bổ đề:}\\
+        Cho $q \in (0;1)$ và hai dãy số thực không âm $\left(x_{n}\right)_{n\geq1}$ , $\left(y_{n}\right)_{n\geq1}$ thỏa mãn:
+        \begin{center}
+            $x_{n+1}\leq q\cdot x_{n}+y_{n},\forall n\geq1$
+        \end{center}
+        Nếu $\lim y_{n}=0$ thì $\lim x_{n}=0.$
+    \end{boxH}
+    \textbf{\textit{Chứng minh bổ đề:}}\
+
+    Vì $\lim y_{n}=0$ nên với mỗi $\varepsilon > 0$ thì luôn $\exists n_0 \in \mathbb{N}$ sao cho với mọi $n\geq n_0$ thì $y_n < \varepsilon$.\
+    
+    Khi đó, $\forall n\geq n_{0}+1$ ta có:
+    \begin{align*}
+        x_{n} & \leq qx_{n-1}+\varepsilon\leq q\left(qx_{n-2}+\varepsilon\right)+\varepsilon\leq\cdots\\
+        \Rightarrow x_{n} & \leq q^{n-n_{0}}x_{n_{0}}+\left(q^{n-n_{0}-1}+\cdots+q+1\right)\varepsilon \\
+        \Rightarrow x_{n} & <q^{n-n_{0}}x_{n_{0}}+\dfrac{\varepsilon}{1-q}\left(1\right)
+    \end{align*}
+    Do $q \in \left(0;1\right)$ nên $\lim q^{n-n_{0}}x_{n}=0$.\
+
+    $\Rightarrow\exists n_{1}>n_{0}\left(n_{1}\in N\right)$ sao cho $q^{n-n_{0}}x_{n_{0}}<\varepsilon,\forall n\geq n_1$ (2).\
+
+    Từ (1) và (2) ta có: $x_{n}<\dfrac{2-q}{1-q}\varepsilon$. Cho $\varepsilon \to 0^+$, ta được $\lim x_n = 0.$\
+
+    \textbf{\textit{Quay trở lại bài toán:}}
+    \begin{align*}
+        a_{n} & =\dfrac{ab}{n}+aa_{n-1}, \forall n>1\\
+        \Rightarrow\left(a_{n}-\dfrac{ab}{1-a}\right) & =a\left(a_{n-1}-\dfrac{ab}{1-a}\right)+\dfrac{a^{2}b}{1-a}-\dfrac{ab}{1-a}+\dfrac{ab}{n}, \forall n>1 \\
+        \Rightarrow\left(a_{n}-\dfrac{ab}{1-a}\right) & =a\left(a_{n-1}-\dfrac{ab}{1-a}\right)+\dfrac{ab}{n}-ab<a\left(a_{n-1}-\dfrac{ab}{1-a}\right)+\dfrac{ab}{n}\\
+        \Rightarrow\left|a_{n}-\dfrac{ab}{1-a}\right| & <a\left|a_{n-1}-\dfrac{ab}{1-a}\right|+\dfrac{ab}{n}
+    \end{align*}
+    Đặt $x_{n}=\left|a_{n}-\dfrac{ab}{1-a}\right|, \forall n \geq 1$ và $y_{n}=\dfrac{ab}{n}, \forall n \geq 1$. Ta có: $x_{n}< ax_{n-1}+y_{n}$.\
+
+    Mặt khác: $a \in (0;1)$ và $\lim y_n = \lim \left(ab\cdot\dfrac{1}{n}\right) = 0$. 
+    
+    Áp dụng bổ đề trên ta có $\lim x_n = 0$. Từ đó kết luận $\lim a_n = \dfrac{ab}{1-a}$.
+    
+    
+\end{enumerate}
+
+\newpage
+%%%% BÀI 3 %%%%
+\begin{boxD}
+\textbf{\color{blue}Câu 3:}\\
+Cho tam giác $ABC$ nhọn nội tiếp đường tròn $(O)$ và có $A^{'}$ là đối xứng của $A$ qua $BC$. Gọi $M$,$N$ là hai điểm trên $(O)$ sao cho các góc $\widehat{BA^{'}C}$ và $\widehat{MA^{'}N}$ có cùng phân giác trong. $AM, AN$ cắt $BC$ lần lượt tại $E$, $F$. Chứng minh rằng đường tròn ngoại tiếp các tam giác $A^{'}MN$, $A^{'}EF$ tiếp xúc nhau.
+\end{boxD}
+Xét phép nghịch đảo đối xứng $\mathcal{F}$ là hợp của phép nghịch đảo tâm $A^{'}$, phương tích $A^{'}B\cdot A^{'}C$ và phép đối xứng qua phân giác trong góc $\widehat{BA'C}$.
+
+\begin{wrapfigure}{r}{0.4\textwidth} % Adjust the width as needed
+    \centering
+    \includegraphics[width=1.1\linewidth]{hình gặp gỡ toán học 2024.jpg} % Adjust the scale as needed
+    \label{fig:wrapfig}
+\end{wrapfigure}
+ \begin{align*}
+     \mathcal{F}:~& M\longmapsto M_1\\
+ &N\longmapsto N_1\\
+ &E\longmapsto E_1\\
+ &F\longmapsto F_1\\
+&(A^{\prime}MN)\longmapsto M_{1}N_1\\&(A^{\prime}EF)\longmapsto E_1F_1
+ \end{align*}
+
+Do $A'M$  và $A'N$ đẳng giác trong $\widehat{BA^{'}C}$
+
+$\Rightarrow A'$, $M$, $N_1$ thẳng hàng và $A'$, $N$, $M_1$ thẳng hàng.
+
+Mặt khác, $A'M\cdot A'M_{1}=A'N\cdot A'N_{1}=A'B\cdot A'C$
+
+$\Rightarrow\dfrac{A^{\prime}M}{A^{\prime}N}=\dfrac{A^{\prime}N_{1}}{A^{\prime}N_{1}}\Rightarrow MN ~\parallel~ M_{1}N_1$ (Ta-lét)
+
+Mà $E ,F\in BC\Rightarrow E_{1},F_{1}\in(A^{\prime}BC)$
+
+$\Rightarrow\widehat{BCE_{1}}=\widehat{BA^{\prime}E_{1}}$
+
+Mà $A'E$ và $A'E_1$ đẳng giác trong $\widehat{BA'C}$
+
+$\Rightarrow \widehat{BA^{'}E_1} = \widehat{EA^{'}C} = \widehat{EAC}=\widehat{MAC}$ ($A'$ đối xứng $A$ qua $BC$).
+
+Mà $\widehat{MAC} = \widehat{MBC} \Rightarrow \widehat{MBC} = \widehat{BCE_1} \Rightarrow MB ~\parallel~ CE_1$
+
+Chứng minh tương tự, ta có: $BE_1 ~\parallel~ MC$, $BF_1 ~\parallel~ NC$ và $BN ~\parallel~ CF_1$
+
+$\Rightarrow BE_{1}CM$ và $BF_{1}CN$ là hình bình hành.
+
+$\Rightarrow ME_1$, $BC$, $NF_1$ giao nhau tại trung điểm mỗi đường.
+
+$\Rightarrow MNE_{1}F_{1}$ là hình bình hành~$\Rightarrow MN ~\parallel~ E_{1}F_{1}\Rightarrow E_{1}F_{1} ~\parallel~ M_{1}N_{1}.$
+
+Vậy $(A'MN)$ và $(A'EF)$ tiếp xúc nhau.
+\clearpage
+%%%% BÀI 4 %%%%
+\begin{boxD}
+\textbf{\color{blue}Câu 4:}\\
+Trên bảng đen có viết các số tự nhiên $1,2,3,...,33$. Trong mỗi bước ta chọn $2$ số $a$, $b$ sao cho $a$ chia hết cho $b$, ta xóa cả hai số đi và thay bởi $\dfrac{a}{b}$. Tiến hành cho đến khi trên bảng không còn hai số nào chia hết cho nhau.
+\begin{enumerate}
+    \item[a)] Chứng minh rằng các số $17$, $19$, $23$, $29$, $31$ luôn còn lại trên bảng sau mỗi lần thực hiện.
+    \item[b)] Trên bảng có thể còn lại ít nhất bao nhiêu số?
+\end{enumerate}
+\end{boxD}
+\begin{enumerate}
+    \item [a)] Xét số nguyên tố 17. Giả sử tại một thời điểm nào đó, số 17 bị xóa ra khỏi bảng. Khi đó tồn tại một số nguyên dương $k$ sao cho $17\mid k$ hoặc $k\mid 17$, $k\in [2,33]$ và $k\neq 17$.
+    
+    Do $17$ chỉ có hai ước nguyên tố là $1$ và $17$ nên $k$ là một bội của $17$ và $k=17t$, với $t\ge 2$. Tuy nhiên, khi đó $k\ge 34$, mâu thuẫn. 
+
+    Vậy số $17$ luôn còn lại trên bảng sau mỗi lần thực hiện. Ta thu được kết luận tương tự với các số $19,23,29,31$.
+    \item [b)] Với một số nguyên tố $p$ và số nguyên dương $n$ bất kỳ, kí hiệu $v_p(n)$ là số mũ của $p$ trong phân tích tiêu chuẩn của $n$. Ta nhắc lại công thức \textbf{Legendre} như sau
+    \[v_p(n!)=\sum\limits_{i=1}^{+\infty}{\left\lfloor \dfrac{n}{p^i}\right\rfloor},\]
+    trong đó $p$ là một số nguyên tố, $n$ là số nguyên dương.
+
+    Với mỗi $n\in\mathbb N$, đặt $S_n$ là tích của các số còn lại trên bảng đen sau $n$ lần biến đổi. Khi đó, ở bước thứ $n+1$, khi thực hiện thay hai số $a,b$ bởi $\dfrac{a}{b}$, ta có
+    \[v_p(S_{n+1})=v_p(S_n)-2v_p(b).\]
+    Điều này cho thấy $v_p(S_{n+1})$ luôn cùng tính chẵn lẻ với $v_p(S_n)$, $p$ là một số nguyên tố bất kỳ (*).
+
+    Dùng công thức \textbf{Legendre}, ta tính được
+    \begin{align*}
+        &v_2(S_0)=v_2(33!)=31\\
+        &v_3(S_0)=v_3(33!)=15\\
+        &v_5(S_0)=v_5(33!)=7\\
+        &v_7(S_0)=v_7(33!)=4\\
+        &v_{11}(S_0)=v_{11}(33!)=3\\
+        &v_{13}(S_0)=v_{13}(33!)=2.
+    \end{align*}
+    Kết hợp với khẳng định (*), ta suy ra rằng khi trên bảng không còn hai số nào mà số này là bội của số kia thì trên bảng phải còn lại ít nhất 7 số (5 số đã nêu ở câu a và 2 số khác), vì $v_2(S_n),v_3(S_n),v_5(S_n),v_{11}(S_n)$ luôn là số lẻ.
+
+    Tiếp theo, ta xây dựng một cách xóa số để cuối cùng trên bảng còn đúng 7 số.
+    \begin{itemize}
+        \item Đầu tiên, ta xóa $13$ và $26$, viết lại $2$; xóa $22$ và $11$, viết lại $2$; xóa $2$ số $2$ và viết lại $1$.
+        \item Tiếp theo, ta xóa $21$ và $3$, viết lại $7$; xóa $2$ số $7$, viết lại $1$; xóa tiếp $14$ và $28$, viết lại $2$.
+        \item Tiếp tục xóa $9$ và $27$, viết lại $3$; xóa $6$ và $18$, viết lại $3$; xóa $12$ và $24$, viết lại $2$; xóa hai số $3$ và hai số $2$ trên bảng, viết lại $2$ số $1$.
+        \item Tiếp tục xóa $5$ và $25$, viết lại $5$; xóa $5$ và $20$, viết lại $4$; xóa $15$ và $30$, viết lại $2$; xóa $4$ và $2$, viết lại $2$. Cuối cùng, xóa cả 2 số $2$, viết lại $1$.
+    \end{itemize}
+    Sau khi kết thúc quá trình trên, trên bảng còn lại đúng 7 số là $10,17,19,23,29,31,33$ và 7 số này không có hai số nào thỏa mãn số này là bội của số kia.
+
+    Vậy ta kết luận trên bảng có thể còn lại ít nhất 7 số. 
+\end{enumerate}
+\end{document}
